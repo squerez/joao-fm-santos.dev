@@ -9,7 +9,9 @@ import {
   ProjectDesc,
   ProjectsIntro,
   ProjectTitle,
+  ProjectLink,
 } from "../styles/Projects.styled";
+
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
 
@@ -41,10 +43,13 @@ const Projects: React.FC = () => {
       <ProjectsIntro>
         Here are some of my projects you shouldn't miss:
       </ProjectsIntro>
-      {projects.map(({ id, title, desc }) => (
+      {projects.map(({ id, title, desc, url }) => (
         <ProjectContainer key={id}>
           <ProjectTitle>{`${id}. ${title}`}</ProjectTitle>
-          <ProjectDesc>{desc}</ProjectDesc>
+          <ProjectDesc>
+            {desc}  Find out more here: {" "}
+            <ProjectLink href={url}> repository. </ProjectLink>
+          </ProjectDesc>
         </ProjectContainer>
       ))}
       <Usage cmd="projects" marginY />
