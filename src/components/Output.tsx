@@ -2,9 +2,11 @@ import About from "./commands/About";
 import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
 import Education from "./commands/Education";
+import Certifications from "./commands/Certifications";
+import Curriculum from "./commands/Curriculum";
 import Email from "./commands/Email";
 import GeneralOutput from "./commands/GeneralOutput";
-import Gui from "./commands/Gui";
+import LinkedIn from "./commands/LinkedIn";
 import Help from "./commands/Help";
 import Welcome from "./commands/Welcome";
 import History from "./commands/History";
@@ -23,7 +25,7 @@ type Props = {
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
 
-  const specialCmds = ["projects", "socials", "themes", "echo"];
+  const specialCmds = ["projects", "curriculum", "socials", "themes", "echo"];
 
   // return 'Usage: <cmd>' if command arg is not valid
   // eg: about tt
@@ -38,12 +40,14 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           clear: <Clear />,
           echo: <Echo />,
           education: <Education />,
+          certifications: <Certifications />,
+          curriculum: <Curriculum />,
           email: <Email />,
-          gui: <Gui />,
+          linkedin: <LinkedIn />,
           help: <Help />,
           history: <History />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/satnaing</GeneralOutput>,
+          pwd: <GeneralOutput>/home/joao-fm-santos</GeneralOutput>,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,

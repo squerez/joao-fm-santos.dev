@@ -52,8 +52,8 @@ export const checkRedirect = (
   currentCommand[0] === command && // current command starts with ('socials'|'projects')
   currentCommand[1] === "go" && // first arg is 'go'
   currentCommand.length > 1 && // current command has arg
-  currentCommand.length < 4 && // if num of arg is valid (not `projects go 1 sth`)
-  _.includes([1, 2, 3, 4], parseInt(currentCommand[2])); // arg last part is one of id
+  currentCommand.length < 5 && // if num of arg is valid (not `projects go 1 sth`)
+  _.includes([1, 2, 3, 4, 5], parseInt(currentCommand[2])); // arg last part is one of id
 
 /**
  * Check current render makes redirect for theme
@@ -121,20 +121,20 @@ export const argTab = (
   }
 
   // 5) if input is 'projects' or 'socials'
-  else if (inputVal === "projects " || inputVal === "socials ") {
+  else if (inputVal === "projects " || inputVal === "socials " || inputVal === "curriculum ") {
     setInputVal(`${inputVal}go`);
     return [];
   }
 
   // 6) if input is 'projects g' or 'socials g'
-  else if (inputVal === "projects g" || inputVal === "socials g") {
+  else if (inputVal === "projects g" || inputVal === "socials g" || inputVal === "curriculum g") {
     setInputVal(`${inputVal}o`);
     return [];
   }
 
   // 7) if input is 'socials go '
   else if (_.startsWith(inputVal, "socials go ")) {
-    ["1.Github", "2.Dev.to", "3.Facebook", "4.Instagram"].forEach(t => {
+    ["1.Github", "2.LinkedIn",].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });
     return hintsCmds;
@@ -143,10 +143,23 @@ export const argTab = (
   // 8) if input is 'projects go '
   else if (_.startsWith(inputVal, "projects go ")) {
     [
-      "1.Sat Naing's Blog",
-      "2.Haru Fashion",
-      "3.Haru API",
-      "4.AstroPaper Blog Theme",
+      "1.maestro",
+      "2.shamir",
+      "3.goji",
+      "4.rustsnake",
+    ].forEach(t => {
+      hintsCmds = [...hintsCmds, t];
+    });
+    return hintsCmds;
+  }
+  // 9) if input is 'curriculum go '
+  else if (_.startsWith(inputVal, "curriculum go ")) {
+    [
+      "1.Mercedes-Benz.io",
+      "2.United Nations (UNICC)",
+      "3.Ascent",
+      "4.Aubay",
+      "5.Boost IT",
     ].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });

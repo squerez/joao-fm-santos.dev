@@ -56,27 +56,27 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "Sat Naing's Blog",
-    desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    title: "maestro",
+    desc: "Python-based data engineering metadata-driven framework. Currently in a testing phase, evolving as I learn more in the DE field.",
+    url: "https://github.com/squerez/maestro",
   },
   {
     id: 2,
-    title: "Haru Fashion",
-    desc: "An ecommerce web application where users can browse various products and make purchases.",
-    url: "https://haru-fashion.vercel.app/",
+    title: "shamir",
+    desc: "simple OTP API designed for team use, born from my curious mind exploring API design concepts.",
+    url: "https://github.com/squerez/shamir",
   },
   {
     id: 3,
-    title: "Haru API",
-    desc: "A RESTful API developed for the Haru fashion ecommerce project.",
-    url: "https://satnaing.github.io/haru-api/",
+    title: "goji",
+    desc: "A simple orchestration engine built with Go designed to be used with Docker, for learning purposes.",
+    url: "https://github.com/squerez/goji",
   },
   {
     id: 4,
-    title: "AstroPaper Blog Theme",
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-    url: "https://astro-paper.pages.dev/",
+    title: "rustnake",
+    desc: "A simple snake game built with Rust and Raylib, for learning purposes.",
+    url: "https://github.com/squerez/rustnake",
   },
 ];
 

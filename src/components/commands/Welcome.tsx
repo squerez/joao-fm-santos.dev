@@ -10,40 +10,31 @@ import {
 } from "../styles/Welcome.styled";
 
 const Welcome: React.FC = () => {
+  const asciiArt = `
+     _                          __                                 _            
+    (_) ___   __ _  ___        / _|_ __ ___        ___  __ _ _ __ | |_ ___  ___ 
+    | |/ _ \\ / _\` |/ _ \\ _____| |_| '_ \` _ \\ _____/ __|/ _\` | '_ \\| __/ _ \\/ __|
+    | | (_) | (_| | (_) |_____|  _| | | | | |_____|\\__ \\ (_| | | | | || (_) \\__ \\
+   _/ |\\___/ \\__,_|\\___/      |_| |_| |_| |_|     |___/\\__,_|_| |_|\\__\\___/|___/
+  |__/                                                                          
+`;
   return (
     <HeroContainer data-testid="welcome">
       <div className="info-section">
         <PreName>
-          {`        
-    _____       __     _   __      _            
-   / ___/____ _/ /_   / | / /___ _(_)___  ____ _
-   \\__ \\/ __ \`/ __/  /  |/ / __ \`/ / __  / __ \`/
-  ___/ / /_/ / /_   / /|  / /_/ / / / / / /_/ / 
- /____/\\__,_/\\___/ /_/ |_/\\__,_/_/_/ /_/\\__, /  
-                                       /____/   
-          `}
+          <pre>{asciiArt}</pre>
         </PreName>
         <PreWrapper>
           <PreNameMobile>
-            {`
-    ____     __          
-   / __/__ _/ /_         
-  _\\ \\/ _ \`/ __/         
- /___/\\_,_/\\__/          
-    _  __     _          
-   / |/ /__ _(_)__  ___ _
-  /    / _ \`/ / _ \\/ _ \`/
- /_/|_/\\_,_/_/_//_/\\_, / 
-                  /___/  
- 
-          `}
+            <pre>{asciiArt}</pre>
           </PreNameMobile>
         </PreWrapper>
-        <div>Welcome to my terminal portfolio. (Version 1.3.1)</div>
+        <div>Welcome to my personal webpage.</div>
+        <div>All you need to know about my portfolio and career can be found here.</div>
         <Seperator>----</Seperator>
         <div>
-          This project's source code can be found in this project's{" "}
-          <Link href="https://github.com/satnaing/terminal-portfolio">
+          This project's source code can be found in this {" "}
+          <Link href="https://github.com/squerez/joao-fm-santos.dev">
             GitHub repo
           </Link>
           .

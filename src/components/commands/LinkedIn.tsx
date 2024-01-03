@@ -2,7 +2,7 @@ import { useContext } from "react";
 import _ from "lodash";
 import { termContext } from "../Terminal";
 
-const Gui: React.FC = () => {
+const LinkedIn: React.FC = () => {
   const { history, rerender } = useContext(termContext);
 
   /* ===== get current command ===== */
@@ -10,10 +10,10 @@ const Gui: React.FC = () => {
 
   /* ===== check current command makes redirect ===== */
   if (rerender && currentCommand[0] === "gui") {
-    window.open("https://satnaing.dev/", "_blank");
+    window.open("https://linkedin.com/joao-fm-santos", "_blank");
   }
 
   return <span></span>;
 };
 
-export default Gui;
+export default LinkedIn;
